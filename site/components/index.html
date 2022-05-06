@@ -55,7 +55,15 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">Custom components</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#getting-started-with-quests-system">Getting Started with Quests system</a>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-new-class">Create a new class</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quest-info">Quest info</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#trigger">Trigger</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quest-action">Quest action</a>
     </li>
     </ul>
                 </li>
@@ -91,9 +99,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="welcome-to-quests-system-documentation">Welcome to Quests system documentation</h1>
+                <h1 id="creating-custom-components-for-the-system">Creating custom components for the system</h1>
+<p>This example will show the creation of a trigger to activate the quest</p>
 <hr />
-<h2 id="getting-started-with-quests-system">Getting Started with Quests system</h2>
+<h2 id="create-a-new-class">Create a new class</h2>
+<p>You can create whatever you want, but in this example it will be QuestTrigger.cs</p>
+<h2 id="quest-info">Quest info</h2>
+<p>Add a variable where we will store information about the quest that will call this component</p>
+<pre><code class="language-c#">    [SerializeField] private QuestsNames questName; //Set the required quest from inspector
+</code></pre>
+<h2 id="trigger">Trigger</h2>
+<p>Since this is a trigger, we add the standard unity method</p>
+<pre><code class="language-c#">    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == &quot;Player&quot;)
+        {
+            gameObject.SetActive(false); //self-disabling
+        }
+    }
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<p>Parameters for defining the trigger type</p>
+<pre><code class="language-c#">    private enum TriggerType { Accept, Update, Complete }
+    [SerializeField] private TriggerType triggerType;
+</code></pre>
+<h2 id="quest-action">Quest action</h2>
+<p>We check for the type of trigger and select the desired action with the quest</p>
+<pre><code class="language-c#">    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == &quot;Player&quot;)
+        {
+            //Perform the desired action depending on the selected type
+            switch (triggerType)
+            {
+                case TriggerType.Accept:
+                    QuestsManager.Instance.AddQuest(questName);
+                    break;
+                case TriggerType.Update:
+                    QuestsManager.Instance.UpdateQuestProgress(questName);
+                    break;
+                case TriggerType.Complete:
+                    QuestsManager.Instance.RemoveQuest(questName, true);
+                    break;
+            }
+
+            gameObject.SetActive(false); //self-disabling
+        }
+    }
+</code></pre>
               
             </div>
           </div><footer>

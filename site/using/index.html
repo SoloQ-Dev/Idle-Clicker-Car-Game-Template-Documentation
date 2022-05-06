@@ -51,7 +51,11 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">Using in code</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#getting-started-with-quests-system">Getting Started with Quests system</a>
+    <li class="toctree-l2"><a class="reference internal" href="#quest-activation">Quest activation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quest-progress">Quest progress</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quest-completeremove">Quest complete/remove</a>
     </li>
     </ul>
                 </li>
@@ -91,9 +95,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="welcome-to-quests-system-documentation">Welcome to Quests system documentation</h1>
+                <h1 id="integrating-the-system-into-your-code">Integrating the system into your code</h1>
+<p><strong><em>IMPORTANT! Don't forget to add the QuestsManager.cs script on scene!</em></strong></p>
 <hr />
-<h2 id="getting-started-with-quests-system">Getting Started with Quests system</h2>
+<h2 id="quest-activation">Quest activation</h2>
+<p>Quest activation occurs through a call to QuestsManager.</p>
+<pre><code class="language-c#">    QuestsManager.Instance.AddQuest(QuestsNames.YourQuest);
+</code></pre>
+<p>After creating/deleting/modifying a quest through the editor, it automatically creates the enum list with all quests in the project:</p>
+<pre><code class="language-c#">    public enum QuestsNames
+    {
+        QuestOne,
+        QuestTwo
+    }
+</code></pre>
+<h2 id="quest-progress">Quest progress</h2>
+<p>If you have logic in the quest that needs to be updated after any action.</p>
+<pre><code class="language-c#">    QuestsManager.Instance.UpdateQuestProgress(QuestsNames.YourQuest);
+</code></pre>
+<h2 id="quest-completeremove">Quest complete/remove</h2>
+<p>If the quest has been completed</p>
+<pre><code class="language-c#">    QuestsManager.Instance.RemoveQuest(QuestsNames.YourQuest, true);
+</code></pre>
+<p>If you want to remove a quest from the list without calling OnComplete</p>
+<pre><code class="language-c#">    QuestsManager.Instance.RemoveQuest(QuestsNames.YourQuest, false);
+</code></pre>
               
             </div>
           </div><footer>
