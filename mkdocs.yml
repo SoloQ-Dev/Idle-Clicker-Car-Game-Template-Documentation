@@ -1,0 +1,11 @@
+site_name: Quests system
+site_url: https://soloq-dev.wixsite.com/main
+nav:
+    - Getting Started: index.md
+    - Editor: editor.md
+    - Using in code: using.md
+    - Custom components: components.md
+    - Sample: sample.md
+    - About: about.md
+
+theme: readthedocs
