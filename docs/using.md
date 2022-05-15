@@ -2,6 +2,12 @@
 ***IMPORTANT! Don't forget to add the QuestsManager.cs script on scene!***
 ****
 
+## Namespace
+To use the system code, you need to include the namespace
+```c#
+    using QuestsSystem;
+```
+
 ## Quest activation
 Quest activation occurs through a call to QuestsManager.
 ```c#
