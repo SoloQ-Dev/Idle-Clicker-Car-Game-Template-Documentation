@@ -22,23 +22,8 @@ After purchasing the asset, go to your project (Version unity in asset ***2020.3
   <li>Import</li>
 </ol>
 
-## Require packages
-Additional packages are required for the asset to work. To install them, follow these steps.
-After the asset is imported, the Installer window should appear, if not:
-<ol>
-  <li>Find Utilities in the menu list</li>
-    <li>Click installer</li>
-</ol>
-After the window appears:
-<ol>
-  <li>Wait for loading</li>
-  <li>If the window shows that some assets are missing, click Install packages</li>
-  <li>Wait for installation</li>
-  <li>Unity will restart after the packages are installed!</li>
-</ol>
-
 ##Game sample
-After installing all the packages, the Import demo button will appear in the Installer window
+The project has an example implementation in the GameSample folder
 
 ## Quests manager (IMPORTANT)
 ***IMPORTANT! Don't forget to add the QuestsManager.cs script on scene!***
