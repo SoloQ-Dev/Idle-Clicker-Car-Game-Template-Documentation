@@ -2,32 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://soloq-dev.wixsite.com/main/</loc>
-         <lastmod>2022-10-17</lastmod>
+         <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://soloq-dev.wixsite.com/main/about/</loc>
-         <lastmod>2022-10-17</lastmod>
+         <loc>https://soloq-dev.wixsite.com/main/code/</loc>
+         <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://soloq-dev.wixsite.com/main/components/</loc>
-         <lastmod>2022-10-17</lastmod>
+         <loc>https://soloq-dev.wixsite.com/main/credit/</loc>
+         <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://soloq-dev.wixsite.com/main/editor/</loc>
-         <lastmod>2022-10-17</lastmod>
+         <loc>https://soloq-dev.wixsite.com/main/hierarchy/</loc>
+         <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://soloq-dev.wixsite.com/main/sample/</loc>
-         <lastmod>2022-10-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://soloq-dev.wixsite.com/main/using/</loc>
-         <lastmod>2022-10-17</lastmod>
+         <loc>https://soloq-dev.wixsite.com/main/images/</loc>
+         <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

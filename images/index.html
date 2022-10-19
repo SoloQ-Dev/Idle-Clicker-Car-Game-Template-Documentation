@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://soloq-dev.wixsite.com/main/about/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://soloq-dev.wixsite.com/main/images/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>About - Idle Clicker Car Game Template Documentation</title>
+    <title>Images - Idle Clicker Car Game Template Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "About";
-        var mkdocs_page_input_path = "about.md";
-        var mkdocs_page_url = "/main/about/";
+        var mkdocs_page_name = "Images";
+        var mkdocs_page_input_path = "images.md";
+        var mkdocs_page_url = "/main/images/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -45,29 +45,25 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../editor/">Editor</a>
+                <li class="toctree-l1"><a class="reference internal" href="../hierarchy/">Hierarchy</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../using/">Using in code</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../components/">Custom components</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../sample/">Sample</a>
+                <li class="toctree-l1"><a class="reference internal" href="../code/">Code</a>
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">About</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Images</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#other-assets">Other Assets</a>
+    <li class="toctree-l2"><a class="reference internal" href="#ui">UI</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#other-projects">Other Projects</a>
+    <li class="toctree-l2"><a class="reference internal" href="#level">Level</a>
     </li>
     </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../credit/">Credit</a>
                 </li>
               </ul>
       </div>
@@ -84,7 +80,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>About</li>
+      <li>Images</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -93,26 +89,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="credit">Credit</h1>
-<p>Quests System by SoloQ <a href="https://soloq-dev.wixsite.com/main">Site</a></p>
-<p>Contact Email: Glucknut@gmail.com</p>
-<h2 id="other-assets">Other Assets</h2>
-<ul>
-<li>Clicker-Idle Game Template - <a href="https://assetstore.unity.com/packages/templates/packs/clicker-idle-game-template-134752#publisher">Asset store</a></li>
-<li>2D Platformer Game Template - <a href="https://assetstore.unity.com/packages/templates/packs/2d-platformer-game-template-139368#description">Asset store</a></li>
-<li>The Battle Multiplayer Game Template - <a href="https://assetstore.unity.com/packages/templates/systems/the-battle-multiplayer-game-template-144703">Asset store</a></li>
-<li>The Dungeon Game Kit - <a href="https://assetstore.unity.com/packages/templates/packs/the-dungeon-game-kit-136459">Asset store</a></li>
-</ul>
-<h2 id="other-projects">Other Projects</h2>
-<ul>
-<li>Remains - <a href="https://store.steampowered.com/app/1309820/Remains/">Steam</a></li>
-<li>Operation sniff - <a href="https://store.steampowered.com/app/1086840/Operation_Sniff/">Steam</a></li>
-</ul>
+                <h1 id="changing-sprites-to-yours">Changing sprites to yours</h1>
+<p>Images are pretty easy to edit</p>
+<hr />
+<h2 id="ui">UI</h2>
+<p>Select any UI element from the [UI] object on the scene. 
+Then in the Inspector window find the Image component, and in the Source Image box drag/select the desired sprite.</p>
+<p>Important!</p>
+<p>In order to be able to use an image in the UI, it must be Sprite. 
+To convert the image into a sprite, you need to select it in the project and in the inspector window in the Texture type item select Sprite</p>
+<h2 id="level">Level</h2>
+<p>The game level is made with the Tile grid system.
+To work with the level, you will need to open the tile editing window:
+Window-&gt;2D-&gt;Tile palette</p>
+<p>More details:
+https://docs.unity3d.com/Manual/class-Tilemap.html</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../sample/" class="btn btn-neutral float-left" title="Sample"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../code/" class="btn btn-neutral float-left" title="Code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../credit/" class="btn btn-neutral float-right" title="Credit">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -135,8 +132,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../sample/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../code/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../credit/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
